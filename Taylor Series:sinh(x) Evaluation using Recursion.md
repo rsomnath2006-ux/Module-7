@@ -4,7 +4,6 @@
 To write a Python program to evaluate the value of **sinh(x)** for **n terms** using recursion.
 
 ---
-
 ## 🧠 ALGORITHM:
 
 1. **Start**
@@ -18,13 +17,25 @@ To write a Python program to evaluate the value of **sinh(x)** for **n terms** u
    - Else, return `(pow(x, 2*n + 1) / fact(2*n + 1)) + sinh(x, n - 1)`
 6. Call the `sinh(x, n)` function and print the result
 7. **Stop**
-
 ---
-
 ## 💻 PROGRAM:
-
-ADD CODE HERE
-
+```
+def fact(i):
+   if i==1 or i==0:
+       return 1
+   else:
+       return i*fact(i-1)
+def sine(x,n):
+  if n==0:
+    return x
+  else:
+    return ((((-1)**n)*pow(x,(2*n+1)))/(fact(2*n+1)))+sine(x,n-1)
+x=int(input())
+n=int(input())
+print(sine(x,n))
+```
 ## OUTPUT
+<img width="569" height="244" alt="image" src="https://github.com/user-attachments/assets/e0bf50e8-aa5b-444b-bfe1-21dc6511e86d" />
 
 ## RESULT
+Thus,the program is executed successfully
